@@ -13,7 +13,6 @@ desired_caps['deviceName'] = '988a1c394a41385544 '
 desired_caps['platformVersion'] = '7.0'
 #设置apk路径
 
-
 #设置app的主包名和主类名
 #adb shell pm list package
 #第二个命令，aapt的地址 + dump badging + app地址
