@@ -28,7 +28,8 @@ desired_caps['resetKeyboard'] = 'True'
 
 #s设置每次打开时，不重新安装
 desired_caps['noReset'] = 'true'
-
+# print(desired_caps)
+# print(type(desired_caps))
 #初始化
-driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+# driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 

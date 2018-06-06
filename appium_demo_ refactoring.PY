@@ -2,21 +2,20 @@
 #准备重构
 #导入appium
 from appium import webdriver
-#
+import yaml
 import os
 import time
 
-# appLocation ="C:\Users\Administrator\Desktop\app-release06_04_01.apk"
-# aaptpath ="C:\Users\Administrator\AppData\Local\Android\Sdk\build-tools\27.0.3\aapt.exe"
+#设备基础信息全部写到GalaxyS8.yaml中
+desired_caps = yaml.load(open("E:/VScode_word/yaml/GalaxyS8.yaml"))
 
-# print (list(os.popen('adb devices').readlines()))
+driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 
-def get_os(x):
-    return (os.popen(x)).readlines()
 
-deviceName = 'adb devices'
 
-print (list(get_os(deviceName)))
+
+
+
     
 
 

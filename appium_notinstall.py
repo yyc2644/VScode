@@ -38,7 +38,6 @@ menuSave = "com.machain.mybitt:id/menuSave"
 
 
 
-
 desired_caps = {}
 desired_caps['platformName'] = 'Android'
 desired_caps['deviceName'] = '988a1c394a41385544 '
