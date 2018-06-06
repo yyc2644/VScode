@@ -9,13 +9,56 @@ import time
 #设备基础信息全部写到GalaxyS8.yaml中
 desired_caps = yaml.load(open("E:/VScode_word/yaml/GalaxyS8.yaml"))
 
+#获取点击按钮的文本
+element = yaml.load(open('E:/VScode_word/yaml/element.yaml','r', encoding='UTF-8'))
+
+#定义事件
+def click_id(ele):
+    driver.find_element_by_id(ele).click()
+#找不到id的就用xpath
+def click_xpath(ele):
+    driver.find_element_by_xpath(ele).click()
+def send_id(ele,keys):
+    driver.find_element_by_id(ele).send_keys(keys)
+#部分有页面跳转的情况，先等待，再刷新，再继续操作
+def wait_5():
+    time.sleep(5)
+    driver.refresh
+
 driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 
+def ADD_Contact():
+    wait_5()
+    #找到管理按钮并点击
+    click_id(element['ivTabManage'])
 
+    #点击交易人 
+    click_id(element['trContacts'])
 
+    #点击添加
+    click_id(element['menuAdd'])
 
+    #点击输入姓名
+    send_id(element['name'],"ethb")
+    
+    #点击选择币种
+    click_id(element['trChoose'])
 
+    #选择eth
+    wait_5()
+    click_xpath(element['ChooseETH'])
 
+    #输入eth地址
+    wait_5()
+    send_id(element['etAddress'],element['ethlocal2'])
+
+    #保存联系人
+    click_id(element['menuSave'])
+
+    print("完成保存联系人")
+    
+
+ADD_Contact()
     
 
 

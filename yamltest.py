@@ -1,13 +1,15 @@
 import yaml
 
-# f = open("E:/VScode_word/Python/GalaxyS8.yaml")  
-
-# x= yaml.load(f)
-# print("type = ",type(x))
-# print(x)
-
+#打开yaml文件,验证类型和
+# desired_caps = yaml.load(open("E:/VScode_word/yaml/GalaxyS8.yaml"))
+# print(type(desired_caps))
+# print(desired_caps)
 desired_caps = yaml.load(open("E:/VScode_word/yaml/GalaxyS8.yaml"))
+element = yaml.load(open('E:/VScode_word/yaml/element.yaml','r', encoding='UTF-8'))
+# print(element)
 
-print(type(desired_caps))
-print(desired_caps)
 
+# yaml 字典中的索引方法
+print(element['ivTabManage'])
+ivTabManage = "com.machain.mybitt:id/ivTabManage"
+print(ivTabManage)
