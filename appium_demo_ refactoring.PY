@@ -5,6 +5,7 @@ from appium import webdriver
 import yaml
 import os
 import time
+import appium_util
 
 #设备基础信息全部写到GalaxyS8.yaml中
 desired_caps = yaml.load(open("E:/VScode_word/yaml/GalaxyS8.yaml"))
@@ -28,32 +29,32 @@ def wait_5():
 driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 
 def ADD_Contact():
-    wait_5()
+    appium_util.wait_5()
     #找到管理按钮并点击
-    click_id(element['ivTabManage'])
+    appium_util.click_id(element['ivTabManage'])
 
     #点击交易人 
-    click_id(element['trContacts'])
+    appium_util.click_id(element['trContacts'])
 
     #点击添加
-    click_id(element['menuAdd'])
+    appium_util.click_id(element['menuAdd'])
 
     #点击输入姓名
-    send_id(element['name'],"ethb")
+    appium_util.send_id(element['name'],"ethb")
     
     #点击选择币种
-    click_id(element['trChoose'])
+    appium_util.click_id(element['trChoose'])
 
     #选择eth
-    wait_5()
-    click_xpath(element['ChooseETH'])
+    appium_util.wait_5()
+    appium_util.click_xpath(element['ChooseETH'])
 
     #输入eth地址
-    wait_5()
-    send_id(element['etAddress'],element['ethlocal2'])
+    appium_util.wait_5()
+    appium_util.send_id(element['etAddress'],element['ethlocal2'])
 
     #保存联系人
-    click_id(element['menuSave'])
+    appium_util.click_id(element['menuSave'])
 
     print("完成保存联系人")
     
