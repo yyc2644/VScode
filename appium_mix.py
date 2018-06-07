@@ -1,21 +1,18 @@
-#encoding:UTF-8
-#用appium链接模拟器进行调试
-
-#这个文件废弃了，模拟器上面的appium坑有点多，目前卡在adb命令上面
-#adb可以用模拟器自带的adb替换AS
-
+#encoding = UTF-8
+#最简单的启动appium
 from appium import webdriver
+
 desired_caps = {}
+
 #设置自动化参数
 desired_caps['platformName'] = 'Android'
 # adb devices
-desired_caps['deviceName'] = '127.0.0.1:62001'
+desired_caps['deviceName'] = '988a1c394a41385544 '
 
 #设置安卓系统版本
 # adb shell getprop ro.build.version.release
-desired_caps['platformVersion'] = '4.4.2'
+desired_caps['platformVersion'] = '7.0'
 #设置apk路径
-
 
 #设置app的主包名和主类名
 #adb shell pm list package
@@ -30,5 +27,10 @@ desired_caps['appActivity'] = 'com.machain.module.main.ui.welcome.WelcomeActivit
 desired_caps['unicodeKeyboard'] = 'True'
 desired_caps['resetKeyboard'] = 'True'
 
+#s设置每次打开时，不重新安装
+desired_caps['noReset'] = 'true'
+# print(desired_caps)
+# print(type(desired_caps))
 #初始化
-driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+# driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+
