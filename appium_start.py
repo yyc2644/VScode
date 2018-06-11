@@ -10,6 +10,7 @@ element = yaml.load(open('E:/VScode_word/yaml/element.yaml','r', encoding='UTF-8
 def start_appium():
 
     #启动driver
-    driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+    # driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+    pass
 
-start_appium(driver)
+start_appium()
