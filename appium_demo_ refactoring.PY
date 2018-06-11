@@ -2,7 +2,7 @@
 #准备重构
 #导入appium
 from appium import webdriver
-import yaml
+import PyYAML
 import os
 import time
 import appium_util
