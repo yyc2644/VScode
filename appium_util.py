@@ -1,8 +1,9 @@
 
 from appium import webdriver
-import start_appium
 
 import time
+
+driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 #定义事件
 def click_id(ele):
     driver.find_element_by_id(ele).click()

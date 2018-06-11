@@ -1,7 +1,15 @@
 import appium_util
+
+import yaml
+
+element = yaml.load(open('E:/VScode_word/yaml/element.yaml','r', encoding='UTF-8'))
+
 #将测试用例整合到这里
-def ADD_Contact():
+def ADD_Contact(keys):
+
     appium_util.wait_5()
+
+
     #找到管理按钮并点击
     appium_util.click_id(element['ivTabManage'])
 
@@ -23,7 +31,7 @@ def ADD_Contact():
 
     #输入eth地址
     appium_util.wait_5()
-    appium_util.send_id(element['etAddress'],element['ethlocal2'])
+    appium_util.send_id(element['etAddress'],keys)
 
     #保存联系人
     appium_util.click_id(element['menuSave'])
@@ -31,5 +39,5 @@ def ADD_Contact():
     print("完成保存联系人")
     
 
-ADD_Contact()
+# ADD_Contact()
     
