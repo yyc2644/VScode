@@ -1,4 +1,5 @@
 #没有任何重构的完整的一份文件的appium
+#author：yicheng
 from appium import webdriver
 import time
 
@@ -85,6 +86,7 @@ driver.find_element_by_id("com.machain.mybitt:id/ivTabManage").click()
 
 #点击交易人 
 driver.find_element_by_id("com.machain.mybitt:id/trContacts").click()
+driver.appWa
 j = 0
 for i in eth_add: 
 

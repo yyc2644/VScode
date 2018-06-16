@@ -79,9 +79,9 @@ class DemoTest(unittest.TestCase):
 
 
     def test_FirstStard(self):
-        self    
+        pass    
 
-    def test_Add_Trader(self):
+    def test_Add_Trader(self):#添加联系人
         self.d.refresh
         #找到管理按钮并点击
         self.d.find_element_by_id("com.machain.mybitt:id/ivTabManage").click()
