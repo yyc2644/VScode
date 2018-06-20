@@ -66,9 +66,10 @@ class DemoTest(unittest.TestCase):
         #点击跳过
         self.d.find_element_by_id("com.machain.mybitt:id/menuSkip").click()
         #选择eth钱包
-        
+        self.d.refresh
+        self.d.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.ImageView").click()
         #点击完成
-
+        self.d.find_element_by_id("com.machain.mybitt:id/menuComplete").click()
         #选择私钥
         self.d.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.RelativeLayout[2]").click()
         #输入私钥
