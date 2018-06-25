@@ -89,7 +89,6 @@ class DemoTest(unittest.TestCase):
         self.d.find_element_by_id("com.machain.mybitt:id/trContacts").click()
         j = 0
         for i in eth_add: 
-
             j = j+1
             eth = (str("eth")+str(j))
             self.d.refresh
