@@ -24,13 +24,8 @@ class DemoTest(unittest.TestCase):
         self.d.implicitly_wait(10)
 
 
-<<<<<<< HEAD
-    # def test_FirstStard(self):
-    #     self    
-=======
     def test_FirstStard(self):
         pass    
->>>>>>> 59f656db650843f34c06501412b9f421d4e4b37f
 
     def test_Add_Trader(self):#添加联系人
         self.d.refresh
