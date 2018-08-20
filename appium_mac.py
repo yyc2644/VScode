@@ -7,6 +7,7 @@ import unittest
 import yaml
 
 eth_add = yaml.load(open('/Users/YiCheng/VSCode/yaml/eth_add.yaml','r',encoding = 'UTF-8'))
+app_path = "/Users/YiCheng/Downloads/mybitt_1.1.ipa"
 
 class DemoTest(unittest.TestCase):
     def setUp(self):
@@ -24,13 +25,7 @@ class DemoTest(unittest.TestCase):
         self.d.implicitly_wait(10)
 
 
-<<<<<<< HEAD
-    # def test_FirstStard(self):
-    #     self    
-=======
-    def test_FirstStard(self):
-        pass    
->>>>>>> 59f656db650843f34c06501412b9f421d4e4b37f
+  
 
     def test_Add_Trader(self):#添加联系人
         self.d.refresh
